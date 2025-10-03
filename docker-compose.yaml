@@ -3,7 +3,36 @@ services:
     image: jekyll-site
     build: .
     volumes: [ .:/usr/src/app ]
-    ports: [ 4000:4000 ]
+    #ports: [ 4000:4000 ]
+    ports: [ "4000:4000", "35729:35729" ]   # 映射 livereload 端口
     user: 1000:1000
     environment: [ JEKYLL_ENV=docker ]
-    command: jekyll serve -H 0.0.0.0 -w --config _config.yml,_config_docker.yml
+    #command: jekyll serve -H 0.0.0.0 -w --config _config.yml,_config_docker.yml
+    command: jekyll serve -H 0.0.0.0 -w --livereload --force_polling --config _config.yml,_config_docker.yml
+
+
+
+
+# services:
+#   jekyll-site:
+#     image: jekyll/jekyll:4           # 用官方镜像最省心（也可继续 build 本地镜像）
+#     working_dir: /usr/src/app
+#     volumes:
+#       - .:/usr/src/app               # 关键：挂载源码，容器内直接读你本地改动
+#     ports:
+#       - "4000:4000"                  # 页面
+#       - "35729:35729"                # livereload（自动刷新端口）
+#     environment:
+#       JEKYLL_ENV: development
+#       # Windows/WSL 下文件事件不稳定，强制轮询更靠谱
+#       JEKYLL_POLLING_INTERVAL: "1"   # 可留空，默认约1s
+#       # 如遇某些 gem 平台冲突可加这一行
+#       # BUNDLE_FORCE_RUBY_PLATFORM: "1"
+#     command: >
+#       jekyll serve
+#       --host 0.0.0.0
+#       --port 4000
+#       --livereload                   # 开启自动刷新
+#       --force_polling                # 用轮询监听文件变化（Windows 必备）
+#       --config _config.yml,_config_docker.yml
+
