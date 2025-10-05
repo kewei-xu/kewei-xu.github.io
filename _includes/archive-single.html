@@ -38,6 +38,39 @@
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
+
+    {%- comment -%} ——— Author block (with link style) ——— {%- endcomment -%}
+    {%- if post.authors or post.author -%}
+      <p class="page__meta author-line">
+        <strong class="author-label">Authors: </strong>
+        {%- if post.authors -%}
+          {%- for a in post.authors -%}
+            {%- assign name = a.name | default: a -%}
+            {%- assign url = a.url | default: "" -%}
+
+            {%- if name contains "Kewei Xu" -%}
+              {%- assign name_html = "<strong>" | append: name | append: "</strong>" -%}
+            {%- else -%}
+              {%- assign name_html = name -%}
+            {%- endif -%}
+
+            {%- if url != "" -%}
+              <a class="author-link" href="{{ url }}">{{ name_html }}</a>
+            {%- else -%}
+              <span class="author-nolink">{{ name_html }}</span>
+            {%- endif -%}
+
+            {%- unless forloop.last -%}, {% endunless -%}
+          {%- endfor -%}
+        {%- else -%}
+          {{ post.author }}
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+
+
+
+
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}

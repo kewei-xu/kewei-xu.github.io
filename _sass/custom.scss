@@ -1,0 +1,26 @@
+/* === Custom author line === */
+.archive__item .author-line {
+  font-size: 1.0em;
+  font-weight: 400;
+  margin: 0.25em 0;
+}
+
+.archive__item .author-line .author-label {
+  color: #494e52;       /* 你想要的颜色，比如黑色 */
+  font-weight: 600;     /* 加粗 */
+  margin-right: 4px;    /* 稍微拉开后面作者的间距 */
+}
+
+.archive__item .author-line .author-nolink {
+  color: #494e52; /* 无链接作者：灰 */
+}
+
+.archive__item .author-line .author-link {
+  color: #4da3ff;           /* 有链接作者：蓝 */
+  text-decoration: underline;
+}
+
+.archive__item .author-line .author-link:hover {
+  color: #1e90ff;
+  text-decoration-thickness: 2px;
+}
