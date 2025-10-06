@@ -1,26 +1,164 @@
-/* === Custom author line === */
+/* 可调参数 */
+:root{
+  --pub-thumb-w: 140px;     /* 缩略图宽度 */
+  --pub-thumb-h: 140px;     /* 缩略图高度（16:9 可用 140x79、160x90 等） */
+  --pub-gap: 14px;          /* 图文间距 */
+  --pub-thumb-offset: .20rem; /* 向下微调，让图片顶部与标题更对齐；想更低就增大 */
+}
+
+/* 用 grid 更好控位 */
+.archive__item .pub-item{
+  display: grid;
+  grid-template-columns: var(--pub-thumb-w) 1fr;
+  gap: var(--pub-gap);
+  align-items: start;       /* 左图与正文顶部对齐（贴近标题第一行） */
+}
+
+/* 缩略图块与图片 */
+.pub-thumb{ 
+  align-self: start; 
+  margin-top: var(--pub-thumb-offset); /* 微调“偏高”的问题 */
+}
+.pub-thumb img{
+  display: block;
+  width: var(--pub-thumb-w);
+  height: var(--pub-thumb-h);
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.12);
+}
+
+/* 标题的上外边距统一为 0，避免把图片看起来“抬高” */
+.pub-body .archive__item-title{
+  margin: 0 0 .4rem;
+  line-height: 1.25;
+}
+
+/* 小屏隐藏缩略图，避免拥挤 */
+@media (max-width: 520px){
+  .archive__item .pub-item{ grid-template-columns: 1fr; }
+  .pub-thumb{ display: none; }
+}
+
+
+
+
+/* 作者行：跟随主题变量变色 */
 .archive__item .author-line {
   font-size: 1.0em;
   font-weight: 400;
   margin: 0.25em 0;
+  color: var(--global-text-color); /* 整行默认文字色（会随主题变） */
 }
 
-.archive__item .author-line .author-label {
-  color: #494e52;       /* 你想要的颜色，比如黑色 */
-  font-weight: 600;     /* 加粗 */
-  margin-right: 4px;    /* 稍微拉开后面作者的间距 */
+/* “Author:” 标签 */
+.author-line .author-label {
+  color: var(--global-text-color);
+  font-weight: 600;
+  margin-right: .25rem;
 }
 
-.archive__item .author-line .author-nolink {
-  color: #494e52; /* 无链接作者：灰 */
+/* 无链接作者（淡一点） */
+.author-line .author-nolink {
+  color: var(--global-text-color);
 }
 
-.archive__item .author-line .author-link {
-  color: #4da3ff;           /* 有链接作者：蓝 */
+/* 有链接作者：颜色与 hover 使用全站链接变量；下划线开启 */
+.author-line .author-link {
+  color: var(--global-masthead-link-color);
   text-decoration: underline;
 }
-
-.archive__item .author-line .author-link:hover {
-  color: #1e90ff;
+.author-line .author-link:hover {
+  color: var(--global-masthead-link-color-hover);
   text-decoration-thickness: 2px;
 }
+
+
+/* 仅关闭“标题”的下划线与 hover 效果（不影响其它链接） */
+.archive__item-title,
+.archive__item-title a {
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+}
+
+/* 主题常见：卡片 hover 时给标题加下划线，精准取消 */
+.archive__item:hover .archive__item-title,
+.archive__item:focus-within .archive__item-title,
+.archive__item:hover .archive__item-title a,
+.archive__item:focus-within .archive__item-title a {
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+}
+
+/* 若主题使用“整卡可点击”的隐藏链接/覆盖层，只把它禁掉显示效果（不影响正文其它链接） */
+.archive__item a[rel="permalink"],
+.archive__item a.archive__item-link,
+.archive__item a.stretched-link {
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+}
+.archive__item a[rel="permalink"]::before,
+.archive__item a[rel="permalink"]::after,
+.archive__item a.archive__item-link::before,
+.archive__item a.archive__item-link::after,
+.archive__item a.stretched-link::before,
+.archive__item a.stretched-link::after {
+  content: none !important;
+}
+
+
+
+.pub-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;  /* 全局控制每行之间的间距，可改为 0.2~0.4rem 微调 */
+}
+
+/* 单独调节标题与首行之间的关系 */
+.pub-body .archive__item-title {
+  margin-bottom: 0.15rem;   /* 标题下方距离更小 */
+  line-height: 1.2;
+}
+
+/* 段落(p)、作者行等间距更紧 */
+.pub-body p,
+.pub-body .page__meta,
+.pub-body .author-line {
+  margin: 0.15rem 0 !important;  /* 统一上下间距 */
+  line-height: 1.35;             /* 更紧凑的行距 */
+}
+
+/* 让“Published in …”与链接区的距离更小 */
+.pub-body p:last-child {
+  margin-bottom: 0.2rem !important;
+}
+
+/* 可选：让字体稍微小一点（如不想改可删除） */
+.pub-body p {
+  font-size: 0.95rem;
+}
+
+
+/* ===== Publications 各条目之间的间距 ===== */
+
+/* 每篇 publication 之间留出明显空间 */
+.archive__item {
+  margin-bottom: 2.0rem;   /* 可以改为 1.5~2rem 取视觉最佳 */
+  padding-bottom: 0.75rem;  /* 可选：给每条底部留点内边距 */
+  border-bottom: 1px solid var(--global-border-color); /* 可选：加浅色分隔线 */
+}
+
+/* 如果你不想要分隔线，可把上面那一行删掉。 */
+
+/* 最后一条去掉底部空白与边线（可选） */
+.archive__item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+/* 作者区块使用主题变量，自动适配明暗色 */
+// .author-line { color: var(--global-text-color); }
+// .author-line .author-label  { color: var(--global-text-color); font-weight: 600; margin-right: .25rem; }
+// .author-line .author-nolink { color: var(--global-text-color-light); }
+// .author-line .author-link   { color: var(--global-link-color); text-decoration: underline; }
+// .author-line .author-link:hover { color: var(--global-link-color-hover); text-decoration-thickness: 2px; }
