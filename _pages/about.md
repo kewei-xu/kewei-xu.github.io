@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-I am a Ph.D. student in computer graphics at the University of Poitiers, working in the [IG](https://www.xlim.fr/ig) group at XLIM UMR CNRS 7252. My current research focuses on realistic rendering and appearance modeling, particularly mixed materials.
+I am a Ph.D. student in computer graphics at the University of Poitiers, working in the [IG](https://www.xlim.fr/ig) group at XLIM UMR CNRS 7252. My current research focuses on physically-based(photo-realistic) rendering and appearance modeling, particularly mixed materials.
 
 I am extremely fortunate to be advised by [Mickaël Ribardière](https://ribardiere.pages.xlim.fr/), [Benjamin Bringier](https://scholar.google.com/citations?user=jhn3hZwAAAAJ&hl=en) and [Daniel Meneveaux](https://d-meneveaux.blogspot.com/) from University of Poitiers.
 
