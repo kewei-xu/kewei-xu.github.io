@@ -20,6 +20,22 @@
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
+  {% if author.cv or site.author.cv or site.author.cv_url %}
+  {% assign cv_path = author.cv | default: site.author.cv_url | default: site.author.cv %}
+
+  {%- comment -%} 相对路径自动指向 /files/；绝对 URL 直接用 {%- endcomment -%}
+  {% unless cv_path contains '://' %}
+    {% assign cv_path = cv_path | prepend: '/files/' %}
+  {% endunless %}
+
+  <p class="author__cv">
+    <a href="{{ cv_path | prepend: base_path }}" class="btn btn--primary btn--small" target="_blank" rel="noopener">
+      <i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV (PDF)
+    </a>
+  </p>
+  {% endif %}
+
+
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">

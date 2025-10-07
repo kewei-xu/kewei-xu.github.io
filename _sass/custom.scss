@@ -223,6 +223,32 @@
 
 
 
+
+/* ====== CV 按钮主题自适应样式 ====== */
+
+/* 默认（浅色模式） */
+.sidebar .author__cv .btn--primary {
+  background-color: var(--global-base-color);
+  color: #fff !important;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar .author__cv .btn--primary:hover {
+  background-color: var(--global-masthead-link-color);
+}
+
+/* 暗色模式 */
+html[data-theme="dark"] .sidebar .author__cv .btn--primary {
+  background-color: var(--global-link-color);
+  color: #fff !important;
+}
+
+html[data-theme="dark"] .sidebar .author__cv .btn--primary:hover {
+  background-color: var(--global-link-color-hover);
+}
+
+
 /* 作者区块使用主题变量，自动适配明暗色 */
 // .author-line { color: var(--global-text-color); }
 // .author-line .author-label  { color: var(--global-text-color); font-weight: 600; margin-right: .25rem; }
