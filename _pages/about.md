@@ -12,9 +12,12 @@ I am a Ph.D. student in computer graphics at the University of Poitiers, working
 
 I am extremely fortunate to be advised by [Mickaël Ribardière](https://ribardiere.pages.xlim.fr/), [Benjamin Bringier](https://scholar.google.com/citations?user=jhn3hZwAAAAJ&hl=en) and [Daniel Meneveaux](https://d-meneveaux.blogspot.com/) from University of Poitiers.
 
-You can find my CV here: [Kewei XU's Curmiculum Vitae]()
+You can find my CV here: [Kewei XU's Curmiculum Vitae](../files/Kewei_XU_s_CV.pdf)
 
 Feel free to contact me anytime by email: [kewei.xu@univ-poitiers.fr](mailto:kewei.xu@univ-poitiers.fr) or [WeChat](../images/wechat_qrcode.png) if you use it too XD.
+
+
+I'm also a video editor, specialising in Motion Design and Anime Music Video (AMV) editing – fuelled by my passion for anime XD. Whether you share that interest or not, you're most welcome to visit my [YouTube channel](https://www.youtube.com/@oitron5050).
 
 <!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
 
