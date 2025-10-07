@@ -71,22 +71,45 @@
           </p>
         {%- endif -%}
 
-        {%- comment -%} ——— Venue / Date ——— {%- endcomment -%}
-        {% if post.collection == 'teaching' %}
-          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.collection == 'publications' %}
-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.date %}
+        {%- comment -%} ——— Venue / Date (with clear “In submission of …” style) ——— {%- endcomment -%}
+
+        {%- if post.status == "submission" -%}
+          <p class="pub-status">
+            <strong>In submission of</strong>
+            {%- if post.venue -%}
+              <i> {{ post.venue }}</i>
+            {%- endif -%}
+          </p>
+
+        {%- elsif post.status == "accepted" -%}
+          <p class="pub-status">
+            <strong>Accepted in</strong>
+            {%- if post.venue -%}
+              <i> {{ post.venue }}</i>
+            {%- endif -%}
+          </p>
+
+        {%- elsif post.collection == 'publications' -%}
+          <p>
+            Published in <i>{{ post.venue }}</i>
+            {%- if post.date -%}, {{ post.date | date: "%Y" }}{%- endif -%}
+          </p>
+
+        {%- elsif post.collection == 'teaching' -%}
+          <p>{{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}</p>
+
+        {%- elsif post.date -%}
           <p class="page__date">
             <strong>
               <i class="fa fa-fw fa-calendar" aria-hidden="true"></i>
               {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}
             </strong>
-            <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">
-              {{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%B %d, %Y" }}
             </time>
           </p>
-        {% endif %}
+        {%- endif -%}
+
 
         {%- comment -%} ——— Excerpt ——— {%- endcomment -%}
         {% if post.excerpt and site.read_more != 'enabled' %}
@@ -99,7 +122,7 @@
 
         {%- comment -%}
           ——— Links block:
-          Prefer Author version > DOI > Paper; plus Slides / BibTeX; include citation if present
+          Prefer Author version > DOI > Paper; plus Slides / Supplement / BibTeX; include citation if present
         {%- endcomment -%}
         {%- assign links = "" -%}
 
@@ -118,6 +141,16 @@
         {%- if post.slidesurl -%}
           {%- if links != "" -%}{%- assign links = links | append: ' | ' -%}{%- endif -%}
           {%- assign links = links | append: '<a href="' | append: post.slidesurl | append: '">Slides</a>' -%}
+        {%- endif -%}
+
+        {%- if post.supplementurl -%}
+          {%- if links != "" -%}{%- assign links = links | append: ' | ' -%}{%- endif -%}
+          {%- assign links = links | append: '<a href="' | append: post.supplementurl | append: '">Supplement</a>' -%}
+        {%- endif -%}
+
+        {%- if post.projecturl -%}
+          {%- if links != "" -%}{%- assign links = links | append: ' | ' -%}{%- endif -%}
+          {%- assign links = links | append: '<a href="' | append: post.projecturl | append: '">Project page</a>' -%}
         {%- endif -%}
 
         {%- if post.bibtexurl -%}

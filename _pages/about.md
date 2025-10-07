@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Hi there!"
+title: "Hi there !"
 author_profile: true
 redirect_from: 
   - /about/
@@ -10,11 +10,11 @@ redirect_from:
 
 I am a Ph.D. student in computer graphics at the University of Poitiers, working in the [IG](https://www.xlim.fr/ig) group at XLIM UMR CNRS 7252. My current research focuses on realistic rendering and appearance modeling, particularly mixed materials.
 
-I am extremely fortunate to be advised by [Mickaël Ribardière](https://ribardiere.pages.xlim.fr/), [Benjamin Bringier](https://scholar.google.com/citations?hl=en&user=jhn3hZwAAAAJ&view_op=list_works&sortby=pubdate) and [Daniel Meneveaux](https://d-meneveaux.blogspot.com/) from University of Poitiers.
+I am extremely fortunate to be advised by [Mickaël Ribardière](https://ribardiere.pages.xlim.fr/), [Benjamin Bringier](https://scholar.google.com/citations?user=jhn3hZwAAAAJ&hl=en) and [Daniel Meneveaux](https://d-meneveaux.blogspot.com/) from University of Poitiers.
 
 You can find my CV here: [Kewei XU's Curmiculum Vitae]()
 
-Feel free to contact me anytime by email: [kewei.xu@univ-poitiers.fr](mailto:kewei.xu@univ-poitiers.fr) or [WeChat]() if you use it too XD.
+Feel free to contact me anytime by email: [kewei.xu@univ-poitiers.fr](mailto:kewei.xu@univ-poitiers.fr) or [WeChat](../images/wechat_qrcode.png) if you use it too XD.
 
 <!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
 

@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Kewei XU"
+title                    : "Kewei XU's Page"
 title_separator          : "-"
 name                     : &name "Kewei XU (徐可为)"
 description              : &description "Kewei's personal page"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -23,10 +23,10 @@ repository               : "kewei-xu/kewei-xu.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Kewei XU"
+  avatar           : "avatar2.png"
+  name             : "Kewei XU (徐可为)"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Student"
+  bio              : "Ph.D. Student"
   location         : "France"
   employer         : "XLIM UMR CNRS 7252"
   uri              : #"kewei.xu50@gmail.com"
