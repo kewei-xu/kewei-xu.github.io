@@ -6,38 +6,44 @@
   --pub-thumb-offset: .20rem; /* 向下微调，让图片顶部与标题更对齐；想更低就增大 */
 }
 
-/* 用 grid 更好控位 */
+/* 宽屏：两列布局 */
 .archive__item .pub-item{
   display: grid;
-  grid-template-columns: var(--pub-thumb-w) 1fr;
-  gap: var(--pub-gap);
-  align-items: start;       /* 左图与正文顶部对齐（贴近标题第一行） */
+  grid-template-columns: var(--pub-thumb-w, 140px) 1fr;
+  gap: var(--pub-gap, 14px);
+  align-items: start;
 }
 
-/* 缩略图块与图片 */
-.pub-thumb{ 
-  align-self: start; 
-  margin-top: var(--pub-thumb-offset); /* 微调“偏高”的问题 */
+/* 缩略图样式 */
+.pub-thumb{
+  align-self: start;
+  margin-top: var(--pub-thumb-offset, .2rem);
 }
 .pub-thumb img{
   display: block;
-  width: var(--pub-thumb-w);
-  height: var(--pub-thumb-h);
+  width: var(--pub-thumb-w, 140px);
+  height: var(--pub-thumb-h, 100px);
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 1px 2px rgba(0,0,0,.12);
 }
 
-/* 标题的上外边距统一为 0，避免把图片看起来“抬高” */
-.pub-body .archive__item-title{
-  margin: 0 0 .4rem;
-  line-height: 1.25;
-}
-
-/* 小屏隐藏缩略图，避免拥挤 */
+/* 窄屏：改为单列，缩略图占满一行并显示在最上方 */
 @media (max-width: 520px){
-  .archive__item .pub-item{ grid-template-columns: 1fr; }
-  .pub-thumb{ display: none; }
+  .archive__item .pub-item{
+    grid-template-columns: 1fr;   /* 单列 */
+  }
+  .pub-thumb{
+    grid-column: 1 / -1;          /* 跨整行，排在最上面 */
+    margin: 0 0 .5rem 0;
+    display: block !important;    /* 覆盖任何早先的隐藏 */
+  }
+  .pub-thumb img{
+    width: 100%;                  /* 撑满容器宽度 */
+    height: auto;                 /* 高度自适应 */
+    aspect-ratio: 16 / 9;         /* 保持比例（可去掉） */
+    object-fit: cover;
+  }
 }
 
 /* 控制 publication 列表标题样式 */
