@@ -1,5 +1,5 @@
 ---
-title: "Implementation of Variance Soft Shadow Mapping"
+title: "Implementation of variance soft shadow mapping"
 thumbnail: "proj_VSSM.png"
 excerpt: "Implementation of [Variance Soft Shadow Mapping (VSSM)](https://jankautz.com/publications/VSSM_PG2010.pdf) in [OpenGL](https://www.opengl.org/) and compares it with some other shadow rendering techniques like percentage-closer filtering (PCF) and percentage-closer soft shadows (PCSS)."
 collection: portfolio
