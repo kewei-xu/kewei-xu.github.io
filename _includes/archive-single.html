@@ -137,7 +137,9 @@
         {%- elsif post.paperurl -%}
           {%- assign links = links | append: '<a href="' | append: post.paperurl | append: '">Paper</a>' -%}
         {%- endif -%}
-        {%- elsif post.code_url -%}
+
+        {%- if post.code_url -%}
+          {%- if links != "" -%}{%- assign links = links | append: ' | ' -%}{%- endif -%}
           {%- assign links = links | append: '<a href="' | append: post.code_url | append: '">Code</a>' -%}
         {%- endif -%}
         {%- if post.slidesurl -%}
