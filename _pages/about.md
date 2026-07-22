@@ -7,14 +7,15 @@ redirect_from:
   - /about.html
 ---
 
+I am currently a Postdoctoral Researcher in the [MANAO](https://manao.inria.fr/) team at Inria Bordeaux. My research focuses on material appearance, physically based rendering and 3D reconstruction.
 
-I am a Ph.D. student in computer graphics at the University of Poitiers, working in the [IG](https://www.xlim.fr/ig) group at XLIM UMR CNRS 7252. My current research focuses on physically-based(photo-realistic) rendering and appearance modeling, particularly mixed materials.
+Previously, I completed my Ph.D. in Computer Graphics at the University of Poitiers, where I worked in the [IG](https://www.xlim.fr/ig) group at XLIM UMR CNRS 7252. My doctoral research focused on photorealistic rendering, particularly the appearance modeling of microscopic hybrid materials.
 
-I am extremely fortunate to be advised by [Mickaël Ribardière](https://ribardiere.pages.xlim.fr/), [Benjamin Bringier](https://scholar.google.com/citations?user=jhn3hZwAAAAJ&hl=en) and [Daniel Meneveaux](https://d-meneveaux.blogspot.com/) from University of Poitiers.
+<!--I am extremely fortunate to be advised by [Mickaël Ribardière](https://ribardiere.pages.xlim.fr/), [Benjamin Bringier](https://scholar.google.com/citations?user=jhn3hZwAAAAJ&hl=en) and [Daniel Meneveaux](https://d-meneveaux.blogspot.com/) from the University of Poitiers.-->
 
 You can find my CV here: [Kewei XU's Curmiculum Vitae](../files/Kewei_XU_s_CV.pdf)
 
-Feel free to contact me anytime by email: [kewei.xu@univ-poitiers.fr](mailto:kewei.xu@univ-poitiers.fr) or [WeChat](../images/wechat_qrcode.png) if you use it too XD.
+Feel free to contact me anytime by email: [kewei.xu@inria.fr](mailto:kewei.xu@inria.fr), Discord: [@oitron](https://discord.com/users/369065734661341195), or [WeChat](../images/wechat_qrcode.png) XD.
 
 
 I'm also a video editor, specialising in Motion Design and Anime Music Video (AMV) editing – fuelled by my passion for anime XD. Whether you share that interest or not, you're most welcome to visit my [YouTube channel](https://www.youtube.com/@oitron5050).

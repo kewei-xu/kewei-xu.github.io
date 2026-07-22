@@ -1,5 +1,5 @@
 ---
-title: "Super-resolution for downscaling on oceanographic fields"
+title: "Super-resolution for Downscaling on Oceanographic Fields"
 thumbnail: "proj_superres.png"
 excerpt: " I frame the downscaling of oceanographic fields as a super-resolution task and address it with a deep learning approach. Building on the classical [SRCNN](https://arxiv.org/abs/1501.00092). I optimize both the network architecture and the data pipeline, and achieve satisfactory results on the [NATL60](https://catalog.pangeo.io/browse/master/ocean/MEOM_NEMO) dataset."
 collection: portfolio
