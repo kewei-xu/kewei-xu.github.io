@@ -26,11 +26,11 @@ author:
   avatar           : "gundam.png"
   name             : "Kewei XU (徐可为)"
   pronouns         : # example: "she/her"  
-  bio              : "Ph.D. Student"
+  bio              : "Postdoctoral Researcher"
   location         : "France"
-  employer         : "XLIM UMR CNRS 7252"
+  employer         : "Inria"
   uri              : #"kewei.xu50@gmail.com"
-  email            : "kewei.xu@univ-poitiers.fr" 
+  email            : "kewei.xu@inria.fr" 
 
   cv               : "Kewei_XU_s_CV.pdf"
   # Academic websites
