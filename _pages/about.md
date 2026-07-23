@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a Postdoctoral Researcher in the [MANAO](https://manao.inria.fr/) team at Inria Bordeaux. My research focuses on material appearance, physically based rendering and 3D reconstruction.
+I am currently a Postdoctoral Researcher in the [MANAO](https://manao.inria.fr/) team at Inria Bordeaux, working with [Romain Pacanowski](https://people.bordeaux.inria.fr/romain.pacanowski/). My research focuses on material appearance, physically based rendering and 3D reconstruction.
 
-Previously, I completed my Ph.D. in Computer Graphics at the University of Poitiers, where I worked in the [IG](https://www.xlim.fr/ig) group at XLIM UMR CNRS 7252. My doctoral research focused on photorealistic rendering, particularly the appearance modeling of microscopic hybrid materials.
+Previously, I completed my Ph.D. in Computer Graphics at the University of Poitiers, where I worked in the [IG](https://www.xlim.fr/ig) group at XLIM UMR CNRS 7252 advised by [Mickaël Ribardière](https://ribardiere.pages.xlim.fr/), [Benjamin Bringier](https://scholar.google.com/citations?user=jhn3hZwAAAAJ&hl=en) and [Daniel Meneveaux](https://d-meneveaux.blogspot.com/). My doctoral research focused on photorealistic rendering, particularly the appearance modeling of microscopic hybrid materials.
 
 <!--I am extremely fortunate to be advised by [Mickaël Ribardière](https://ribardiere.pages.xlim.fr/), [Benjamin Bringier](https://scholar.google.com/citations?user=jhn3hZwAAAAJ&hl=en) and [Daniel Meneveaux](https://d-meneveaux.blogspot.com/) from the University of Poitiers.-->
 
